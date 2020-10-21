@@ -361,6 +361,18 @@
             </li>
           </ul>
         </div>
+        <div class="mailing-form-wraper">
+          <h3 class="slogan">Подпишитесь на рассылку</h3>
+          <form action="#" class="mailing-form">
+            <input type="mail" name="user-mail" class="mailing-form_input" placeholder="E-mail">
+            <div class="button-wraper">
+              <button type="submit" class="mailing-form_submit">Подписаться</button>
+              <svg width="24px" height="24px" class="submit-icon-svg">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -370,6 +382,34 @@
             <use href="./images/sprite.svg#icon-close-button"></use>
           </svg>
         </button>
+        <h2 class="headline-modal">Оставьте свои данные, мы вам перезвоним</h2>
+        <form action="#" class="modal-form">
+          <label class="modal-form-fild">
+            Имя
+            <input type="text" name="user-name" class="modal-form-input" required>
+              <svg width="12px" height="12px" class="modal-icon-svg">
+                <use href="./images/sprite.svg#icon-modal-name"></use>
+              </svg>
+          </label>
+          <label class="modal-form-fild">
+            Телефон
+            <input type="tel" name="user-phone" class="modal-form-input" required>
+              <svg width="13px" height="13px" class="modal-icon-svg">
+                <use href="./images/sprite.svg#icon-modal-tel"></use>
+              </svg>
+          </label>
+          <label class="modal-form-fild">
+            Почта
+            <input type="mail" name="user-mail" class="modal-form-input" required>
+              <svg width="15px" height="12px" class="modal-icon-svg">
+                <use href="./images/sprite.svg#icon-modal-mail"></use>
+              </svg>
+          </label>
+            Комментарий
+          <textarea name="user-massage" id="" cols="30" rows="10" class="modal-form-massage"></textarea>
+          <input type="checkbox" name="user-policy" value="accept-policy" class="modal-form-policy">
+          <button type="submit" class="modal-form-button">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

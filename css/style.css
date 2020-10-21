@@ -31,6 +31,8 @@ html {
 body {
   font-family: var(--main-font);
 }
+/*----Section 2/hidden titel----*/
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -47,7 +49,7 @@ body {
 .link {
   text-decoration: none;
 }
-/*===Page bg===*/
+/*----Page bg----*/
 .background-color {
   color: var(--primary-bg-color);
 }
@@ -57,6 +59,7 @@ body {
 .logo-accent {
   color: var(--bright-accent-color);
 }
+/*----Section 1/bg+bg-img+img+gradient----*/
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -97,12 +100,13 @@ body {
 img {
   display: block;
 }
-
+/*----General Container----*/
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
+/*----Hero Modal----*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -134,6 +138,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: all 500ms linear 250ms;
+  padding: 40px;
 }
 .close-button {
   position: absolute;
@@ -145,6 +150,13 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius:50%;
   cursor: pointer;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover,
+.close-button:focus {
+  fill: #2196F3;
 }
 .icon-close-button {
   position: absolute;
@@ -577,7 +589,8 @@ img {
 }
 
 .logo-address-footer,
-.social-block-footer {
+.social-block-footer,
+.mailing-form-wraper {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -629,6 +642,7 @@ img {
 }
 
 .slogan {
+  display: inline-block;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1,141;
@@ -665,10 +679,126 @@ img {
   height: 20px;
 }
 
+ 
+.mailing-form-wraper {
+  margin-left: 93px;
+}
+
+.mailing-form {
+  
+  display: flex; 
+}
+.mailing-form_input:not(:last-child) {
+margin-right: 12px;
+}
 
 
+.mailing-form_input:focus {
+  outline: none;
+} 
+.mailing-form_input {
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
 
+.mailing-form_submit:focus {
+  outline: none;
+}
+.mailing-form_submit {
+  display: flex;
+  align-items: center;
+  padding-left: 29px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1,876;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--titel-accent-bg-color);
+  border-radius: 4px;
+  background-color: var(--bg-accent-color);
+  border: 1px solid var(--bg-accent-color);
+}
+.button-wraper {
+  position: relative;
+  display: flex;
+}
+.submit-icon-svg {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--titel-accent-bg-color);
+}
 /* ======== END FOOTER ======== */
+
+/* ======== MODAL FORM======== */
+
+.headline-modal {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1,151;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--titel-text-color);
+}
+.modal-form-fild {
+  position: relative;
+  margin-bottom: 28px;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-input {
+  padding-left: 42px;
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-form-massage {
+  margin-top: 4px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  margin-bottom: 20px;
+  
+}
+.modal-form-input:focus,
+.modal-form-massage:focus {
+  outline: none;
+  border: 1px solid #2196F3;
+}
+.modal-form-input:focus + .modal-icon-svg {
+  fill: #2196F3;
+}
+
+.modal-form-button {
+  align-self: flex-start;
+  color: var(--titel-accent-bg-color);
+  background: var(--bg-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.modal-icon-svg {
+  position: absolute;
+  bottom: 14px;
+  left: 15px;
+}
+
+/* ======== END MODAL FORM ======== */
+
 
 /* ======== PORTFOLIO-Filter-Buttons ======== */
 
