@@ -364,9 +364,9 @@
         <div class="mailing-form-wraper">
           <h3 class="slogan">Подпишитесь на рассылку</h3>
           <form action="#" class="mailing-form">
-            <input type="mail" name="user-mail" class="mailing-form_input" placeholder="E-mail">
+            <input type="mail" name="user-mail" class="mailing-form-input" placeholder="E-mail">
             <div class="button-wraper">
-              <button type="submit" class="mailing-form_submit">Подписаться</button>
+              <button type="submit" class="mailing-form-submit">Подписаться</button>
               <svg width="24px" height="24px" class="submit-icon-svg">
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
@@ -384,34 +384,48 @@
         </button>
         <h2 class="headline-modal">Оставьте свои данные, мы вам перезвоним</h2>
         <form action="#" class="modal-form">
-          <label class="modal-form-fild">
-            Имя
-            <input type="text" name="user-name" class="modal-form-input" required>
+          <label class="modal-form-field">
+            Имя 
+            <span class="form-field-wraper">
+              <input type="text" name="user-name" class="modal-form-input" required>
               <svg width="12px" height="12px" class="modal-icon-svg">
                 <use href="./images/sprite.svg#icon-modal-name"></use>
               </svg>
+            </span>
           </label>
-          <label class="modal-form-fild">
+          <label class="modal-form-field">
             Телефон
+            <span class="form-field-wraper">
             <input type="tel" name="user-phone" class="modal-form-input" required>
               <svg width="13px" height="13px" class="modal-icon-svg">
                 <use href="./images/sprite.svg#icon-modal-tel"></use>
               </svg>
+            </span>
           </label>
-          <label class="modal-form-fild">
+          <label class="modal-form-field">
             Почта
+            <span class="form-field-wraper">
             <input type="mail" name="user-mail" class="modal-form-input" required>
               <svg width="15px" height="12px" class="modal-icon-svg">
                 <use href="./images/sprite.svg#icon-modal-mail"></use>
               </svg>
+            </span>
           </label>
-            Комментарий
-          <textarea name="user-massage" id="" cols="30" rows="10" class="modal-form-massage"></textarea>
-          <input type="checkbox" name="user-policy" value="accept-policy" class="modal-form-policy">
-          <button type="submit" class="modal-form-button">Отправить</button>
+          <span class="coment-titel-wraper">Комментарий</span>
+          <textarea name="user-massage" id="" cols="30" rows="10" class="modal-form-massage" placeholder="Введите текст"></textarea>
+          <input type="checkbox" name="user-policy" value="accept-policy" id="check-policy" class="modal-form-policy visually-hidden">
+          <label class="modal-form-policy-label" for="check-policy">
+            Соглашаюсь с рассылкой и принимаю &nbsp; <a class="modal-link-accent-color" href="#">Условия договора</a>
+          </label>
+          <div class="submit-button-wraper">
+            <button type="submit" class="modal-form-button">Отправить</button>
+          </div>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
+
+
+
